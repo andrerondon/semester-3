@@ -40,5 +40,49 @@ toxicTim.matches('a') // false
 
 
 // Manipulation
+// The <node>.style property will return all the inline-styles of a node.
 
 toxicTim.style.border = 'solid medium red'
+
+// If you want to get the computed values of a css property use the global method getComputedStyle(<node>) passing  in the node you want styles for
+
+getComputedStyle(toxicTim).height // '200px'
+
+
+// Manipulating IDs and Classes
+
+toxicTim.id // returns the ids
+// toxicTim.id = 'new-id' // overwrite the id
+
+// <node>.className will return the classes of a node
+
+toxicTim.className // returns 'figher doggo'
+
+// <node>.classList will return a object that has methods to add or remove classes from the class list of a node
+
+toxicTim.classList.remove('doggo') // removes doggo from className
+toxicTim.classList.add('doggo') // add dogoo to className
+
+
+// to get Attributes of a node
+// getAttribute, setAttribute, hasAttribute, removeAttribute
+toxicTim.getAttribute('id'); // 'toxic-tim'
+
+// Remove an element
+
+// <node>.remove()
+
+// Creating Nodes
+
+const drillBitDarel = document.createElement('div');
+drillBitDarel.className = 'doggo fighter';
+drillBitDarel.id = 'drill-bit-darel';
+drillBitDarel.style.backgroundImage = `url(images/drill-bit-darel.jpg)`;
+
+// Drill bit darel is created but not attached to the DOM yet...
+
+// Adding Nodes to the DOM
+
+// <node>.appendChild(<node>)
+
+const roster = document.querySelector('.team.salmon')
